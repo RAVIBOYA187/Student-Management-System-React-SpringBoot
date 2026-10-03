@@ -1,0 +1,351 @@
+/* ==========================
+   DASHBOARD PAGE
+========================== */
+
+.dashboard-page {
+  padding: 25px;
+  min-height: 100vh;
+  background: #f4f7fc;
+  transition: all 0.3s ease;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 5px;
+}
+
+.dashboard-header p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.dashboard-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-btn {
+  width: 45px;
+  height: 45px;
+  border: none;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #334155;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.header-btn:hover {
+  transform: translateY(-3px);
+  background: #2563eb;
+  color: white;
+}
+
+/* ==========================
+   DROPDOWNS
+========================== */
+
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  width: 240px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  z-index: 100;
+}
+
+.dropdown-menu h4 {
+  padding: 15px;
+  background: #2563eb;
+  color: white;
+}
+
+.dropdown-item {
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dropdown-item:hover {
+  background: #f1f5f9;
+}
+
+/* ==========================
+   STATISTICS
+========================== */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.stat-card h3 {
+  color: #64748b;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+/* ==========================
+   COMMON CARD
+========================== */
+
+.dashboard-card {
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.dashboard-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+/* ==========================
+   QUICK ACTIONS
+========================== */
+
+.quick-actions {
+  gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.quick-actions button {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.quick-actions button:hover {
+  background: #1d4ed8;
+  transform: translateY(-3px);
+}
+
+/* ==========================
+   ANALYTICS SECTION
+========================== */
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.analytics-stats {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.analytics-stats h4 {
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.analytics-stats p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+/* ==========================
+   CHART PLACEHOLDER
+========================== */
+
+.chart-placeholder {
+  height: 280px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+/* ==========================
+   TABLES
+========================== */
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-table thead {
+  background: #2563eb;
+  color: white;
+}
+
+.dashboard-table th {
+  padding: 14px;
+  text-align: left;
+}
+
+.dashboard-table td {
+  padding: 14px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.dashboard-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* ==========================
+   DARK MODE
+========================== */
+
+.dark-mode {
+  background: #0f172a;
+  color: white;
+}
+
+.dark-mode .dashboard-header h1,
+.dark-mode .dashboard-card h2,
+.dark-mode .stat-card p {
+  color: white;
+}
+
+.dark-mode .dashboard-header p {
+  color: #cbd5e1;
+}
+
+.dark-mode .dashboard-card,
+.dark-mode .stat-card,
+.dark-mode .header-btn,
+.dark-mode .dropdown-menu {
+  background: #1e293b;
+  color: white;
+}
+
+.dark-mode .dashboard-table td {
+  border-color: #334155;
+}
+
+.dark-mode .dashboard-table tbody tr:hover {
+  background: #334155;
+}
+
+.dark-mode .chart-placeholder {
+  border-color: #475569;
+  color: #cbd5e1;
+}
+
+.dark-mode .dropdown-item:hover {
+  background: #334155;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 992px) {
+
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .dashboard-page {
+    padding: 15px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-actions {
+    flex-direction: column;
+  }
+
+  .quick-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .analytics-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .dashboard-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
